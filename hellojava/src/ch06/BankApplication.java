@@ -89,6 +89,10 @@ public class BankApplication {
 				System.out.println("정보 없음");
 				return;
 			}	
+			if(account.getBalance()+money>Account.MAX_BALANCE){
+				System.out.println("한도초과");
+				return;
+			}
 			account.setBalance(account.getBalance()+money);
 			System.out.println("결과: 예금이 성공되었습니다.");
 		}
@@ -103,9 +107,12 @@ public class BankApplication {
 			if(account == null) {
 				System.out.println("정보 없음");
 				return;
-			}	
+			}
+			if(account.getBalance()-money<Account.MIN_BALANCE){
+				System.out.println("잔액부족");
+				return;
+			}
 			account.setBalance(account.getBalance()-money);
-			
 			System.out.println("결과: 출금이 성공되었습니다.");
 			
 		}
