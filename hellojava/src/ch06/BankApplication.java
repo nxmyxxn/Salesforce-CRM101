@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class BankApplication {
 	
-	static Account[] accountArray = new Account[100];
-	static Scanner sc = new Scanner(System.in);
+	private static Account[] accountArray = new Account[100];
+	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		
@@ -89,12 +89,16 @@ public class BankApplication {
 				System.out.println("정보 없음");
 				return;
 			}	
-			if(account.getBalance()+money>Account.MAX_BALANCE){
-				System.out.println("한도초과");
+			if(money<=0)
 				return;
-			}
-			account.setBalance(account.getBalance()+money);
-			System.out.println("결과: 예금이 성공되었습니다.");
+			else {
+				if(account.getBalance()+money>Account.MAX_BALANCE){
+					System.out.println("한도초과");
+					return;
+				}
+				account.setBalance(account.getBalance()+money);
+				System.out.println("결과: 예금이 성공되었습니다.");
+			}	
 		}
 		
 		//출금
