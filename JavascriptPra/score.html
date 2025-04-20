@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 점수 입력</title>
+    <style>
+        body{
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+        h2{
+            color: #333;
+        }
+        .result{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>학생 점수 입력 결과</h2>
+    <div class="result" id="result"></div>
+
+    <script>
+        let input = prompt("이름과 점수 입력하세요 (ex.홍길동 80, 김자바 90, 홍자바 60):");
+
+        let students = input.split(',').map(item => {
+            let [name, score] = item.trim().split(" ");
+            return {name, score: Number(score)};
+        })
+
+        let total = students.reduce((sum, student) => sum+student.score, 0);
+        let average = total/students.length;
+        
+        students.sort((a,b)=>b.score-a.score);
+
+        let output = `<p><strong>총점: </strong>${total}점<br><strong>평균: </strong>${average.toFixed(2)}점</p>`
+        students.forEach((student, index) => {
+            output += `<p>${index+1}등: ${student.name}-${student.score}점</p>`
+        });
+
+        document.getElementById("result").innerHTML = output;
+    </script>
+</body>
+</html>
