@@ -49,7 +49,7 @@ request.setCharacterEncoding("UTF-8");
 	
 	
 	<tr>
-		<td align=right width="110">phone number:</td>
+		<td align=right width="110">phone number</td>
 		<td width="170"><%=vo.getPhone() %></td>
 	</tr>
 	<tr>

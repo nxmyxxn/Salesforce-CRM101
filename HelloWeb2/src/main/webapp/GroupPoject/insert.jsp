@@ -5,6 +5,7 @@
 <% 
 	request.setCharacterEncoding("UTF-8");
 	
+	//입력받기
 	//getParameter안에 인자는 form태그의 name속성이 일치하는 input에서 가져옴
 	String userId = request.getParameter("userId");
 	String userName = request.getParameter("name");
@@ -23,11 +24,6 @@
 	String marketingEmailAgreement = request.getParameter("ragree");
 	
 	
-	
-	System.out.println(productType);
-	System.out.println(finalQuantity);
-
-
 	
 	if("on".equals(privacyAgreement)){
 		privacyAgreement = "Y";
@@ -54,6 +50,7 @@
 	
 	FormVo vo = new FormVo(userId, userName, email, phoneNumber, password, productType, finalQuantity, privacyAgreement, serviceAgreement, marketingEmailAgreement);
 	
+	//데이터베이스 작업 담당할 객체(dao) 생성
 	FormDao dao = new FormDao();
 	dao.insert(vo);
 
