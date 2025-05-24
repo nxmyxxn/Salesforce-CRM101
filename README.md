@@ -78,9 +78,9 @@ A simple web application that saves user input from a form to an Oracle database
 ![image](https://github.com/user-attachments/assets/119218e7-984c-45d8-9b0d-0564fb6a8a02)
 ### Submission Result
 ![image](https://github.com/user-attachments/assets/6276d0a4-3753-42f2-938b-f9b1e847ecba)
+### Notes
+![image](https://github.com/user-attachments/assets/e1f827a4-b7a1-45c0-b38f-e986efe1498b)
 
-#### notes
-![image](https://github.com/user-attachments/assets/6b3d5c20-7a10-426c-a78e-7a94bbecf349)
 
 
 
