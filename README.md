@@ -56,7 +56,7 @@ A simple web application that saves user input from a form to an Oracle database
 
 1. Clone the repository into your Eclipse workspace.
 2. Set up your Oracle database and update connection details in `FormDao.java`.
-3. Deploy the project on Apache Tomcat.
+3. Run on Apache Tomcat locally.
 4. Access `form.jsp` via your local server (e.g., `http://localhost:8080/HelloWeb2/GroupProject/form.jsp`).
 5. Fill out the form, submit it, and check the result page.
 
